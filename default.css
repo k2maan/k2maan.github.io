@@ -1,16 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Staatliches&display=swap");
 
 :root {
-  --primaryColour: #eaeaea;
-  --secondaryColour: #ffffff;
+  --primaryColour: #333333;
+  --secondaryColour: #f9dc5c;
+  --secondaryBG: #202020;
+
+  --yellowColour: #eed45b;
 
   --borderColour: #c1c1c1;
 
-  --primaryText: black;
-  --secondaryText: #4b5156;
-  --themeDotBorder: #24292e;
-
-  --previewBg: rgb(251, 249, 243, 0.8);
+  --primaryText: whitesmoke;
+  --secondaryText: #f4f8a5;
 
   --previewShadow: #f0ead6;
   --buttonColor: black;
@@ -30,7 +30,7 @@ h5,
 h6,
 strong {
   font-family: "Staatliches", cursive;
-  color: var(--primayText);
+  color: var(--primaryText);
   font-weight: 500;
 }
 
@@ -47,7 +47,7 @@ textarea {
 
 a {
   text-decoration: none;
-  color: #17a2b8;
+  color: var(--secondaryColour);
 }
 
 ul {
@@ -80,7 +80,7 @@ h6 {
 }
 
 .s2 {
-  background-color: var(--secondaryColour);
+  background-color: var(--secondaryBG);
   border-bottom: 1px solid var(--borderColour);
   overflow: auto;
 }
@@ -108,8 +108,7 @@ h6 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--primaryColour);
-  border-radius: 5px 5px 0 0;
+  background-color: var(--secondaryBG);
 }
 
 #navigation {
@@ -123,48 +122,12 @@ h6 {
   margin-left: 5px;
 }
 
-.dots-wrapper {
-  display: flex;
-  padding: 10px;
-}
-
-#dot-1 {
-  background-color: red;
-}
-
-#dot-2 {
-  background-color: yellow;
-}
-
-#dot-3 {
-  background-color: green;
-}
-
-.browser-dot {
-  background-color: black;
-  height: 15px;
-  width: 15px;
-  border-radius: 50%;
-  margin: 5px;
-
-  -webkit-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
-  box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
-}
-
 .left-column {
-  height: 100vh;
+  height: 75vh;
   grid-area: left-column;
   padding-top: 50px;
   padding-bottom: 50px;
 }
-/* 
-.img_bg {
-  background-color: yellowgreen;
-  margin: auto;
-  border-radius: 50%;
-  padding-left: 30px;
-} */
 
 .img-container {
   display: grid;
@@ -172,71 +135,43 @@ h6 {
 
 .intro {
   margin: auto;
+  line-height: 1.5px;
 }
 
 #profile_pic {
-  -webkit-box-shadow: -29px -9px 0px 0px rgba(0, 0, 0, 1);
-  -moz-box-shadow: -29px -9px 0px 0px rgba(0, 0, 0, 1);
-  box-shadow: -29px -9px 0px 0px rgba(0, 0, 0, 1);
-
   align-self: center;
+  border: 2px solid var(--yellowColour);
   position: relative;
   margin: 0 auto;
   border-radius: 50%;
   height: 250px;
   width: 250px;
+  z-index: 3;
   object-fit: cover;
+}
+
+.big-cir {
+  position: absolute;
+  right: 20%;
+  left: 100px;
+
+  height: 260px;
+  width: 260px;
+  border-radius: 50%;
+
+  margin: 0 auto;
+  background-color: var(--yellowColour);
+
+  display: block;
 }
 
 #theme-option-wrapper {
   display: flex;
   justify-content: center;
 }
-/* 
-.theme-dot {
-  height: 30px;
-  width: 30px;
-  background-color: black;
-  border-radius: 50%;
-
-  margin: 5px;
-  border: 2px solid var(--themeDotBorder);
-
-  -webkit-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
-  box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
-
-  cursor: pointer;
-} */
-
-/* .theme-dot:hover {
-  border-width: 5px;
-}
-
-#light-mode {
-  background-color: white;
-}
-
-#blue-mode {
-  background-color: #192734;
-}
-
-#green-mode {
-  background-color: #78866b;
-}
-
-#purple-mode {
-  background-color: #7e4c74;
-}
-
-#settings-note {
-  font-size: 12px;
-  font-style: italic;
-  text-align: center;
-} */
 
 .right-column {
-  height: 100vh;
+  height: 75vh;
   width: 50%;
   margin: 0 auto;
 
@@ -247,30 +182,13 @@ h6 {
   padding-top: 50px;
   padding-bottom: 50px;
 }
-/* 
-#preview-shadow {
-  background-color: var(--previewShadow);
-  width: 300px;
-  padding-left: 30px;
-  padding-top: 30px;
-} */
 
 #preview {
   height: 100%;
   display: grid; /* border: 2px solid #17a2b8; */
-  /* background-color: var(--previewBg); */
   padding: 15px;
   position: relative;
 }
-
-/* .corner {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  border: 2px solid #17a2b8;
-  background-color: #17a2b8;
-  position: absolute;
-} */
 
 #corner-tl {
   top: -5px;
@@ -397,6 +315,9 @@ h6 {
   .main-container {
     width: 95%;
   }
+  .big-cir {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -410,6 +331,10 @@ h6 {
 
   .right-column {
     justify-content: center;
+  }
+
+  .intro h2 {
+    white-space: nowrap;
   }
 }
 
