@@ -2,17 +2,15 @@
 
 :root {
   --primaryColour: #333333;
-  --secondaryColour: #f9dc5c;
+  --secondaryColour: #00b4d8;
   --secondaryBG: #202020;
 
-  --yellowColour: #eed45b;
-
-  --borderColour: #c1c1c1;
+  --borderColour: #bfd7ea;
 
   --primaryText: whitesmoke;
-  --secondaryText: #f4f8a5;
+  --secondaryText: #d4f5fc;
 
-  --previewShadow: #f0ead6;
+  --previewShadow: #cbf3f0;
   --buttonColor: black;
 }
 
@@ -140,7 +138,7 @@ h6 {
 
 #profile_pic {
   align-self: center;
-  border: 2px solid var(--yellowColour);
+  border: 2px solid var(--secondaryColour);
   position: relative;
   margin: 0 auto;
   border-radius: 50%;
@@ -148,6 +146,10 @@ h6 {
   width: 250px;
   z-index: 3;
   object-fit: cover;
+}
+
+.company {
+  color: var(--secondaryColour);
 }
 
 .big-cir {
@@ -160,14 +162,9 @@ h6 {
   border-radius: 50%;
 
   margin: 0 auto;
-  background-color: var(--yellowColour);
+  background-color: var(--secondaryColour);
 
   display: block;
-}
-
-#theme-option-wrapper {
-  display: flex;
-  justify-content: center;
 }
 
 .right-column {
@@ -185,29 +182,42 @@ h6 {
 
 #preview {
   height: 100%;
-  display: grid; /* border: 2px solid #17a2b8; */
+  display: grid;
   padding: 15px;
   position: relative;
 }
 
-#corner-tl {
-  top: -5px;
-  left: -5px;
+.line {
+  width: 300px;
+  padding: 1px;
+  background-color: var(--secondaryColour);
+  margin-bottom: 5px;
 }
 
-#corner-tr {
-  top: -5px;
-  right: -5px;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
-#corner-br {
-  bottom: -5px;
-  right: -5px;
+.social-item {
+  padding-left: 0;
+  float: left;
 }
 
-#corner-bl {
-  bottom: -5px;
-  left: -5px;
+.social-item a {
+  color: var(--secondaryText);
+  padding-top: 10px;
+  font-size: 24px;
+  display: block;
+  text-align: center;
+  padding-right: 16px;
+  text-decoration: none;
+}
+
+.social-item a:hover {
+  color: var(--secondaryColour);
 }
 
 .about-wrapper {
