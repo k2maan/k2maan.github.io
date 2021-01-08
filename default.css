@@ -1,16 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Staatliches&display=swap");
 
 :root {
-  --primaryColour: #333333;
+  --primaryColour: #eeeeee;
   --secondaryColour: #00b4d8;
-  --secondaryBG: #202020;
+  --secondaryBG: #e0e0e0;
 
-  --borderColour: #bfd7ea;
+  --borderColour: #96a7b49d;
 
-  --primaryText: whitesmoke;
-  --secondaryText: #d4f5fc;
+  --primaryText: #333333;
+  --secondaryText: #355157;
 
-  --previewShadow: #cbf3f0;
+  --previewShadow: #444444;
   --buttonColor: black;
 }
 
@@ -18,6 +18,10 @@ html,
 body {
   padding: 0;
   margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -72,9 +76,9 @@ h6 {
 }
 
 .s1 {
+  overflow: hidden;
   background-color: var(--primaryColour);
   border-bottom: 1px solid var(--borderColour);
-  overflow: auto;
 }
 
 .s2 {
@@ -99,12 +103,19 @@ h6 {
   background-color: var(--secondaryColour);
   display: grid;
 }
-
+.navbar {
+  background-color: var(--secondaryBG);
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  width: 100%;
+  position: fixed;
+}
 .nav-wrapper {
   grid-area: nav-wrapper;
   border-bottom: 1px solid var(--borderColour);
   display: flex;
-  justify-content: space-between;
   align-items: center;
   background-color: var(--secondaryBG);
 }
@@ -112,12 +123,7 @@ h6 {
 #navigation {
   margin: 0;
   padding: 10px;
-}
-
-#navigation {
   display: inline-block;
-  margin-right: 5px;
-  margin-left: 5px;
 }
 
 .left-column {
@@ -175,7 +181,7 @@ h6 {
   grid-area: right-column;
   display: grid;
   align-content: center;
-
+  overflow: hidden;
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -254,10 +260,10 @@ ul {
 }
 
 .post {
-  border: 1px solid var(--borderColour);
-  -webkit-box-shadow: -2px 7px 21px -9px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: -2px 7px 21px -9px rgba(0, 0, 0, 0.75);
-  box-shadow: -2px 7px 21px -9px rgba(0, 0, 0, 0.75);
+  border: 2px solid var(--secondaryColour);
+  -webkit-box-shadow: -2px 7px 10px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -2px 7px 10px -7px rgba(0, 0, 0, 0.75);
+  box-shadow: -2px 7px 10px -7px rgba(0, 0, 0, 0.75);
 }
 
 .thumbnail {
