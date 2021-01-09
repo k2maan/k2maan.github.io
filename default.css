@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Staatliches&display=swap");
 
 :root {
-  --primaryColour: #eeeeee;
+  --primaryColour: #fff;
   --secondaryColour: #00b4d8;
-  --secondaryBG: #e0e0e0;
+  --secondaryBG: #f1f1f1;
 
   --borderColour: #96a7b49d;
 
@@ -29,10 +29,10 @@ h2,
 h3,
 h4,
 h5,
-h6,
-strong {
+h6 {
   font-family: "Staatliches", cursive;
   color: var(--primaryText);
+  text-shadow: 3px 5px #8beafd96;
   font-weight: 500;
 }
 
@@ -50,6 +50,11 @@ textarea {
 a {
   text-decoration: none;
   color: var(--secondaryColour);
+}
+
+a:hover {
+  text-shadow: 2px 2px #aaf1ffad;
+  color: #0a7d94;
 }
 
 ul {
@@ -114,10 +119,22 @@ h6 {
 }
 .nav-wrapper {
   grid-area: nav-wrapper;
+  justify-content: space-evenly;
   border-bottom: 1px solid var(--borderColour);
   display: flex;
   align-items: center;
-  background-color: var(--secondaryBG);
+  background-color: var(--secondaryColour);
+}
+
+.nav-wrapper a {
+  color: var(--secondaryBG);
+  text-decoration: none;
+}
+
+.nav-wrapper a:hover {
+  color: var(--primaryColour);
+  text-decoration: none;
+  text-shadow: 3px 2px #87c0cc;
 }
 
 #navigation {
@@ -138,13 +155,18 @@ h6 {
 }
 
 .intro {
+  padding-top: 20px;
   margin: auto;
   line-height: 1.5px;
 }
 
+.intro h2 {
+  text-shadow: 3px 5px #8beafd96;
+}
+
 #profile_pic {
   align-self: center;
-  border: 2px solid var(--secondaryColour);
+  border: 1px solid var(--secondaryColour);
   position: relative;
   margin: 0 auto;
   border-radius: 50%;
@@ -160,22 +182,25 @@ h6 {
 
 .big-cir {
   position: absolute;
-  right: 20%;
-  left: 100px;
+  right: 10%;
+  left: 80px;
 
   height: 260px;
   width: 260px;
   border-radius: 50%;
 
   margin: 0 auto;
-  background-color: var(--secondaryColour);
+  background-image: linear-gradient(
+    10deg,
+    var(--secondaryColour),
+    rgb(171, 222, 238)
+  );
 
   display: block;
 }
 
 .right-column {
   height: 75vh;
-  width: 50%;
   margin: 0 auto;
 
   grid-area: right-column;
@@ -206,7 +231,6 @@ ul {
   padding: 0;
   overflow: hidden;
 }
-
 .social-item {
   padding-left: 0;
   float: left;
@@ -234,14 +258,13 @@ ul {
   gap: 100px;
 }
 
-#skills {
-  display: flex;
-  justify-content: space-evenly;
-  background-color: var(--previewShadow);
+.skills {
+  display: grid;
+  align-content: flex-start;
 }
 
-.social-links {
-  display: grid;
+.skills-icons {
+  display: block;
   align-content: center;
   text-align: center;
 }
