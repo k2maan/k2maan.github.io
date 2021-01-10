@@ -11,7 +11,6 @@
   --secondaryText: #355157;
 
   --previewShadow: #444444;
-  --buttonColor: black;
 }
 
 html,
@@ -48,6 +47,11 @@ textarea {
 }
 
 a {
+  -webkit-transition: color 0.3s ease-out;
+  -moz-transition: color 0.3s ease-out;
+  -o-transition: color 0.3s ease-out;
+  transition: color 0.3s ease-out;
+
   text-decoration: none;
   color: var(--secondaryColour);
 }
@@ -57,9 +61,9 @@ a:hover {
   color: #0a7d94;
 }
 
-ul {
+/* ul {
   list-style: none;
-}
+} */
 
 h1 {
   font-size: 56px;
@@ -127,6 +131,8 @@ h6 {
 }
 
 .nav-wrapper a {
+  font-family: "Staatliches", cursive;
+  font-size: 20px;
   color: var(--secondaryBG);
   text-decoration: none;
 }
@@ -191,8 +197,8 @@ h6 {
 
   margin: 0 auto;
   background-image: linear-gradient(
-    10deg,
-    var(--secondaryColour),
+    180deg,
+    rgb(112, 196, 221),
     rgb(171, 222, 238)
   );
 
@@ -237,6 +243,11 @@ ul {
 }
 
 .social-item a {
+  -webkit-transition: color 0.5s ease-out;
+  -moz-transition: color 0.5s ease-out;
+  -o-transition: color 0.5s ease-out;
+  transition: color 0.5s ease-out;
+
   color: var(--secondaryText);
   padding-top: 10px;
   font-size: 24px;
@@ -263,14 +274,38 @@ ul {
   align-content: flex-start;
 }
 
-.skills-icons {
-  display: block;
-  align-content: center;
-  text-align: center;
+ul.skill-ul li {
+  display: inline;
+  list-style-type: square;
 }
 
-#social_img {
-  width: 100%;
+.skill-item {
+  color: var(--secondaryColour);
+  padding: 15px;
+  padding-left: 0;
+}
+
+.btn {
+  font-family: "Staatliches", cursive;
+  font-size: 18px;
+
+  -webkit-transition: background-color 0.8s ease-out;
+  -moz-transition: background-color 0.8s ease-out;
+  -o-transition: background-color 0.8s ease-out;
+  transition: background-color 0.8s ease-out;
+  text-shadow: 3px 5px rgba(189, 221, 230, 0.74);
+
+  color: var(--primaryText);
+  width: fit-content;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #69becf;
+}
+
+.btn:hover {
+  color: #444;
+  text-shadow: 3px 5px rgb(189, 221, 230);
+  background-color: #46d9f7;
 }
 
 .post-wrapper {
@@ -340,17 +375,10 @@ ul {
   font-size: 14px;
 }
 
-#submit-btn {
-  margin-top: 10px;
-  width: 100%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  color: #fff;
-  background-color: var(--buttonColor);
-  border: none;
-}
-
 @media screen and (max-width: 1200px) {
+  .line {
+    width: fit-content;
+  }
   .main-container {
     width: 95%;
   }
@@ -366,6 +394,10 @@ ul {
       "nav-wrapper"
       "left-column"
       "right-column";
+  }
+
+  .about-wrapper {
+    gap: 0px;
   }
 
   .right-column {
