@@ -125,12 +125,19 @@ h6 {
   width: 100%;
   position: fixed;
 }
+
 .nav-wrapper {
+  padding-left: 250px;
+  padding-right: 250px;
+
+  height: 50px;
+
   grid-area: nav-wrapper;
-  justify-content: space-evenly;
-  border-bottom: 1px solid var(--borderColour);
-  display: flex;
+  justify-content: space-between;
   align-items: center;
+  display: flex;
+
+  border-bottom: 1px solid var(--borderColour);
   background-color: var(--secondaryColour);
 }
 
@@ -151,6 +158,12 @@ h6 {
   margin: 0;
   padding: 10px;
   display: inline-block;
+}
+
+.nav-text li {
+  display: inline-block;
+  padding: 10px;
+  margin-top: 5px;
 }
 
 .left-column {
@@ -205,7 +218,6 @@ h6 {
     rgb(112, 196, 221),
     rgb(171, 222, 238)
   );
-
   display: block;
 }
 
@@ -267,6 +279,7 @@ ul {
 }
 
 .about-wrapper {
+  font-size: 20px;
   display: grid;
   padding-top: 50px;
   padding-bottom: 50px;
@@ -301,8 +314,7 @@ ul {
   grid-template-columns: repeat(auto-fit, 320px);
   gap: 20px;
   justify-content: center;
-
-  padding-bottom: 50px;
+  padding-bottom: 60px;
 }
 
 .post {
@@ -338,15 +350,41 @@ ul {
   .main-container {
     width: 95%;
   }
+
+  .nav-wrapper {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  .about-me {
+    padding: 10px;
+  }
+
+
   .main-container-about {
-    padding: 20px;
     overflow: hidden;
     width: 95%;
   }
-  .big-cir {
-    display: none;
+
+   .big-cir {
+    position: absolute;
+    right: 0%;
+    right: 130px;
+
+    height: 260px;
+    width: 260px;
+    border-radius: 50%;
+
+    margin: 0 auto;
+    background-image: linear-gradient(
+      180deg,
+      rgb(112, 196, 221),
+      rgb(171, 222, 238)
+    );
+    display: block;
   }
 }
+
 
 @media screen and (max-width: 800px) {
   .intro-wrapper {
@@ -367,6 +405,34 @@ ul {
 
   .intro h2 {
     white-space: nowrap;
+  }
+
+  .nav-wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    grid-area: nav-wrapper;
+  }
+
+  .big-cir {
+    position: absolute;
+    right: 100%;
+    left: 30px;
+
+    height: 260px;
+    width: 260px;
+    border-radius: 50%;
+
+    margin: 0 auto;
+    background-image: linear-gradient(
+      180deg,
+      rgb(112, 196, 221),
+      rgb(171, 222, 238)
+    );
+    display: block;
   }
 }
 
