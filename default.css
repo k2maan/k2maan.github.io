@@ -360,13 +360,12 @@ ul {
     padding: 10px;
   }
 
-
   .main-container-about {
     overflow: hidden;
     width: 95%;
   }
 
-   .big-cir {
+  .big-cir {
     position: absolute;
     right: 0%;
     right: 130px;
@@ -384,7 +383,6 @@ ul {
     display: block;
   }
 }
-
 
 @media screen and (max-width: 800px) {
   .intro-wrapper {
@@ -446,5 +444,15 @@ ul {
 
   #preview {
     width: 280px;
+  }
+
+  .nav-wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    grid-area: nav-wrapper;
   }
 }
