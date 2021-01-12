@@ -397,6 +397,10 @@ ul {
     gap: 0px;
   }
 
+  .about-me {
+    padding: 5px;
+  }
+
   .right-column {
     justify-content: center;
   }
