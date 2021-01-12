@@ -331,15 +331,16 @@ ul {
   color: #4b5156;
 }
 
-
 @media screen and (max-width: 1200px) {
   .line {
-    width: fit-content;
+    width: 25 0px;
   }
   .main-container {
     width: 95%;
   }
   .main-container-about {
+    padding: 20px;
+    overflow: hidden;
     width: 95%;
   }
   .big-cir {
