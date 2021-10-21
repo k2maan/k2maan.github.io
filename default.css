@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@500&display=swap");
-
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@500&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Staatliches&display=swap");
 :root {
     --primaryColour: #fff;
-    --secondaryColour: #00b4d8;
+    --secondaryColour: #2ca6d6;
     --secondaryBG: #f1f1f1;
 
     --borderColour: #96a7b49d;
@@ -29,7 +29,9 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Oswald", sans-serif;
+    /* font-family: "Oswald", sans-serif; */
+    font-family: "Staatliches", cursive;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
     color: var(--primaryText);
     text-shadow: 3px 5px #8beafd96;
@@ -43,7 +45,8 @@ span,
 label,
 input,
 textarea {
-    font-family: "Montserrat", sans-serif;
+    /* font-family: "Montserrat", sans-serif; */
+    font-family: "Poppins", sans-serif;
     font-size: 18px;
     color: var(--secondaryText);
 }
@@ -144,7 +147,8 @@ h6 {
 }
 
 .nav-wrapper a {
-    font-family: "Oswald", cursive;
+    /* font-family: "Oswald", cursive; */
+    font-family: "Staatliches", cursive;
     font-size: 20px;
     color: var(--secondaryBG);
     text-decoration: none;
@@ -251,8 +255,7 @@ h6 {
 
 ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin-left: -16px;
     overflow: hidden;
 }
 
@@ -289,7 +292,8 @@ ul {
 }
 
 .btn {
-    font-family: "Oswald", cursive;
+    /* font-family: "Oswald", cursive; */
+    font-family: "Staatliches", cursive;
     font-size: 18px;
 
     -webkit-transition: background-color 0.8s ease-out;
