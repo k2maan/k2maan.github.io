@@ -2,13 +2,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Staatliches&display=swap");
 :root {
     --primaryColour: #fff;
-    --secondaryColour: #2ca6d6;
+    --secondaryColour: #655892;
     --secondaryBG: #f1f1f1;
 
     --borderColour: #96a7b49d;
 
     --primaryText: #333333;
-    --secondaryText: #355157;
+    --secondaryText: #51405c;
 
     --previewShadow: #444444;
 }
@@ -34,7 +34,7 @@ h6 {
     letter-spacing: 1.5px;
     text-transform: uppercase;
     color: var(--primaryText);
-    text-shadow: 3px 5px #8beafd96;
+    text-shadow: 2px 4px #9f8cbd9d;
     font-weight: 500;
 }
 
@@ -62,8 +62,8 @@ a {
 }
 
 a:hover {
-    text-shadow: 2px 2px #aaf1ffad;
-    color: #0a7d94;
+    text-shadow: 2px 2px #9f8cbd7e;
+    color: #504577;
 }
 
 /* ul {
@@ -157,7 +157,7 @@ h6 {
 .nav-wrapper a:hover {
     color: var(--primaryColour);
     text-decoration: none;
-    text-shadow: 3px 2px #87c0cc;
+    text-shadow: 3px 2px #bfb1e5a1;
 }
 
 #navigation {
@@ -190,7 +190,7 @@ h6 {
 }
 
 .intro h2 {
-    text-shadow: 3px 5px #8beafd96;
+    text-shadow: 3px 5px #6e6fb2;
 }
 
 #profile_pic {
@@ -221,8 +221,8 @@ h6 {
     margin: 0 auto;
     background-image: linear-gradient(
         180deg,
-        rgb(112, 196, 221),
-        rgb(171, 222, 238)
+        rgb(126, 126, 163),
+        rgb(100, 79, 134)
     );
     display: block;
 }
@@ -300,19 +300,19 @@ ul {
     -moz-transition: background-color 0.8s ease-out;
     -o-transition: background-color 0.8s ease-out;
     transition: background-color 0.8s ease-out;
-    text-shadow: 3px 5px rgba(189, 221, 230, 0.74);
+    text-shadow: 3px 5px rgba(189, 192, 230, 0.74);
 
     color: var(--primaryText);
     width: fit-content;
     border-radius: 5px;
     padding: 10px;
-    background-color: #69becf;
+    background-color: rgb(149, 117, 168);
 }
 
 .btn:hover {
     color: #444;
-    text-shadow: 3px 5px rgb(189, 221, 230);
-    background-color: #46d9f7;
+    text-shadow: 3px 5px rgb(200, 189, 230);
+    background-color: #8d63be;
 }
 
 .post-wrapper {
@@ -383,8 +383,8 @@ ul {
         margin: 0 auto;
         background-image: linear-gradient(
             180deg,
-            rgb(112, 196, 221),
-            rgb(171, 222, 238)
+            rgb(126, 126, 163),
+            rgb(100, 79, 134)
         );
         display: block;
     }
@@ -437,8 +437,8 @@ ul {
         margin: 0 auto;
         background-image: linear-gradient(
             180deg,
-            rgb(112, 196, 221),
-            rgb(171, 222, 238)
+            rgb(126, 126, 163),
+            rgb(100, 79, 134)
         );
         display: block;
     }
