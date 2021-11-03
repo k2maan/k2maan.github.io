@@ -434,13 +434,16 @@ ul {
         width: 260px;
         border-radius: 50%;
 
-        margin: 0 auto;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: -15px;
+
         background-image: linear-gradient(
             180deg,
             rgb(126, 126, 163),
             rgb(100, 79, 134)
         );
-        display: block;
+        /* display: block; */
     }
 }
 
