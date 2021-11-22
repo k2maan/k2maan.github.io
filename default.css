@@ -31,12 +31,16 @@ h3,
 h4,
 h5,
 h6 {
-    /* font-family: "Oswald", sans-serif; */
     font-family: "Staatliches", cursive;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     color: var(--primaryText);
     font-weight: 500;
+}
+.intro h1,
+.intro p {
+    padding: 0;
+    margin: 0;
 }
 
 p,
@@ -107,6 +111,7 @@ h6 {
 .main-container {
     width: 1200px;
     margin: 0 auto;
+    padding: 0;
 }
 .main-container-about {
     width: 1100px;
@@ -120,10 +125,6 @@ h6 {
     min-height: 10em;
 }
 
-.intro-wrapper {
-    background-color: var(--secondaryColour);
-    display: grid;
-}
 .navbar {
     background-color: var(--secondaryBG);
     top: 0;
@@ -187,31 +188,13 @@ h6 {
 }
 
 .intro {
-    padding-top: 20px;
     margin: auto;
-    line-height: 1.5px;
-}
-
-#profile_pic {
-    align-self: center;
-    border: 1px solid var(--secondaryColour);
-    position: relative;
-    margin: 0 auto;
-    border-radius: 50%;
-    height: 250px;
-    width: 250px;
-    z-index: 3;
-    object-fit: cover;
-}
-
-.company {
-    color: var(--secondaryColour);
 }
 
 .big-cir {
     position: absolute;
-    right: 10%;
-    left: 80px;
+    right: 20%;
+    /* left: 80px; */
 
     height: 260px;
     width: 260px;
@@ -224,18 +207,6 @@ h6 {
         rgb(100, 79, 134)
     );
     display: block;
-}
-
-.right-column {
-    height: 75vh;
-    margin: 0 auto;
-
-    grid-area: right-column;
-    display: grid;
-    align-content: center;
-    overflow: hidden;
-    padding-top: 50px;
-    padding-bottom: 50px;
 }
 
 #preview {
@@ -271,7 +242,7 @@ ul {
 
     color: var(--secondaryText);
     padding-top: 10px;
-    font-size: 24px;
+    font-size: 36px;
     display: block;
     text-align: center;
     padding-right: 20px;
@@ -339,17 +310,101 @@ ul {
     color: #4b5156;
 }
 
-@media screen and (max-width: 1200px) {
-    .line {
-        width: 25 0px;
+/* New styles for intro */
+
+.container {
+    padding: 220px 160px 200px 160px;
+    display: flex;
+    margin: 0;
+}
+
+.about-container {
+    padding: 0 240px;
+    display: flex;
+    margin: 0;
+}
+
+.column-1 {
+    flex-shrink: 0; /* shrinks to 0 to apply 70% width*/
+    flex-basis: 50%; /* sets initial width to 70% */
+}
+
+.box {
+    padding: 50px;
+}
+
+.columns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.column {
+    flex: 50%;
+}
+
+.img-wrapper {
+    margin: 50px 0 50px 100px;
+}
+
+#profile_pic {
+    align-self: center;
+    border: 1px solid var(--secondaryText) !important;
+    padding: 5px;
+    position: relative;
+    margin: 0 auto;
+    height: 250px;
+    width: 250px;
+    z-index: 3;
+    object-fit: cover;
+}
+
+#square {
+    position: relative;
+    top: 200px;
+    right: 10px;
+    background: var(--secondaryColour);
+    width: 240px;
+    height: 240px;
+}
+
+@media screen and (max-width: 1000px) {
+    .about-container {
+        flex-direction: column;
+        margin: 0;
+        flex-direction: column;
+        padding: 0 100px;
     }
+
+    #profile_pic {
+        border: 1px solid var(--secondaryText);
+        position: relative;
+        padding: 0;
+        margin: 0 auto;
+        height: 250px;
+        width: 250px;
+        z-index: 3;
+        bottom: 200px;
+    }
+
+    #square {
+        position: relative;
+        top: -10px;
+        right: 10px;
+        background: var(--secondaryColour);
+        width: 240px;
+        height: 240px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
     .main-container {
         width: 95%;
     }
 
     .nav-wrapper {
-        padding-left: 100px;
-        padding-right: 100px;
+        padding-left: 50px;
+        padding-right: 50px;
     }
 
     .about-me {
@@ -362,31 +417,41 @@ ul {
     }
 
     .big-cir {
-        position: absolute;
-        right: 0%;
-        right: 130px;
+        display: none;
+    }
 
-        height: 260px;
-        width: 260px;
-        border-radius: 50%;
+    .container {
+        min-width: 100px;
+        flex-direction: column;
+        margin: 0;
+    }
 
-        margin: 0 auto;
-        background-image: linear-gradient(
-            180deg,
-            rgb(126, 126, 163),
-            rgb(100, 79, 134)
-        );
-        display: block;
+    .about-container {
+        padding: 0 150px;
+    }
+
+    .box {
+        margin: 0 0 1rem;
     }
 }
 
-@media screen and (max-width: 800px) {
-    .intro-wrapper {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "nav-wrapper"
-            "left-column"
-            "right-column";
+@media screen and (max-width: 600px) {
+    .line {
+        max-width: 300px;
+    }
+
+    .container {
+        flex-direction: column;
+        margin: 0;
+        flex-direction: column;
+        padding: 250px 0;
+    }
+
+    .about-container {
+        flex-direction: column;
+        margin: 0;
+        flex-direction: column;
+        padding: 0 20px;
     }
 
     .about-wrapper {
@@ -397,14 +462,6 @@ ul {
         padding: 5px;
     }
 
-    .right-column {
-        justify-content: center;
-    }
-
-    .intro h2 {
-        white-space: nowrap;
-    }
-
     .nav-wrapper {
         padding-left: 20px;
         padding-right: 20px;
@@ -415,56 +472,40 @@ ul {
         grid-area: nav-wrapper;
     }
 
-    .big-cir {
-        position: absolute;
-        right: 100%;
-        left: 30px;
-
-        height: 260px;
-        width: 260px;
-        border-radius: 50%;
-
-        margin-top: 0;
-        margin-bottom: 0;
-        margin-left: -15px;
-
-        background-image: linear-gradient(
-            180deg,
-            rgb(126, 126, 163),
-            rgb(100, 79, 134)
-        );
-        /* display: block; */
-    }
-}
-
-@media screen and (max-width: 400px) {
-    #preview-shadow {
-        max-width: 280px;
-        height: 180px;
-        padding-left: 10px;
-        padding-top: 10px;
+    .box {
+        margin: 0 0;
+        padding: 20px;
     }
 
-    #preview {
-        width: 280px;
+    .intro h1 {
+        font-size: 42px;
     }
 
-    .nav-wrapper {
-        padding-left: 20px;
-        padding-right: 20px;
-        overflow: hidden;
-        justify-content: space-between;
-        align-items: center;
-        display: flex;
-        grid-area: nav-wrapper;
-    }
-    .intro h3 {
-        text-size-adjust: auto;
-        font-size: 24px;
-        margin: 24px 0;
+    #profile_pic {
+        border: 1px solid var(--secondaryText) !important;
+        position: relative;
+        top: -120px;
+        padding: 0;
+        margin: 0 auto;
+        height: 250px;
+        width: 250px;
+        z-index: 3;
+        bottom: 50px;
     }
 
-    .intro p {
-        font-size: 16px;
+    #square {
+        position: relative;
+        top: 60px;
+        right: 10px;
+        background: var(--secondaryColour);
+        width: 240px;
+        height: 240px;
+        z-index: 0;
+    }
+
+    .img-wrapper {
+        margin: 0 60px;
+        padding: 0;
+        /* display: flex; */
     }
 }
