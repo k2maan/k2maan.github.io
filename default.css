@@ -1,18 +1,18 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@500&display=swap"); */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Staatliches&display=swap");
 :root {
-    --primaryColour: #fff;
-    --secondaryColour: #655892;
-    --secondaryBG: #f1f1f1;
+    --primaryColour: #000;
+    --secondaryColour: #4ecca3;
+    --secondaryBG: rgb(12, 12, 12);
 
-    --borderColour: #96a7b49d;
+    --borderColour: #6eb49d;
 
-    --primaryText: #333333;
-    --secondaryText: #51405c;
+    --primaryText: #f1f1f1;
+    --secondaryText: #bdbdd7;
 
-    --previewShadow: #444444;
+    --previewShadow: #eeeeee;
 
-    --textShadow: #9f8cbd9d;
+    --textShadow: #6eb49d;
 }
 
 html,
@@ -41,6 +41,28 @@ h6 {
 .intro p {
     padding: 0;
     margin: 0;
+    color: var(--primaryText);
+}
+
+.intro h1 {
+    background-image: -webkit-linear-gradient(
+        180deg,
+        var(--secondaryColour),
+        #feab3a
+    );
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: hue 4s infinite linear;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@-webkit-keyframes hue {
+    from {
+        -webkit-filter: hue-rotate(0deg);
+    }
+    to {
+        -webkit-filter: hue-rotate(-360deg);
+    }
 }
 
 p,
@@ -62,12 +84,11 @@ a {
     transition: color 0.3s ease-out;
 
     text-decoration: none;
-    color: var(--secondaryColour);
+    color: var(--borderColour);
 }
 
 a:hover {
-    text-shadow: 2px 2px #9f8cbd7e;
-    color: #504577;
+    color: var(--secondaryColour);
 }
 
 /* ul {
@@ -99,12 +120,12 @@ h6 {
 .s1 {
     overflow: hidden;
     background-color: var(--primaryColour);
-    border-bottom: 1px solid var(--borderColour);
+    border-bottom: 0.5px solid var(--secondaryText);
 }
 
 .s2 {
     background-color: var(--secondaryBG);
-    border-bottom: 1px solid var(--borderColour);
+    border-bottom: 0.5px solid var(--secondaryColour);
     overflow: auto;
 }
 
@@ -159,9 +180,8 @@ h6 {
 }
 
 .nav-wrapper a:hover {
-    color: var(--primaryColour);
+    color: var(--primaryText);
     text-decoration: none;
-    text-shadow: 3px 2px #bfb1e5a1;
 }
 
 #navigation {
@@ -176,37 +196,8 @@ h6 {
     margin-top: 5px;
 }
 
-.left-column {
-    height: 75vh;
-    grid-area: left-column;
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-
 .img-container {
     display: grid;
-}
-
-.intro {
-    margin: auto;
-}
-
-.big-cir {
-    position: absolute;
-    right: 20%;
-    /* left: 80px; */
-
-    height: 260px;
-    width: 260px;
-    border-radius: 50%;
-
-    margin: 0 auto;
-    background-image: linear-gradient(
-        180deg,
-        rgb(126, 126, 163),
-        rgb(100, 79, 134)
-    );
-    display: block;
 }
 
 #preview {
@@ -240,7 +231,7 @@ ul {
     -o-transition: color 0.5s ease-out;
     transition: color 0.5s ease-out;
 
-    color: var(--secondaryText);
+    color: var(--secondaryColour);
     padding-top: 10px;
     font-size: 36px;
     display: block;
@@ -250,7 +241,7 @@ ul {
 }
 
 .social-item a:hover {
-    color: var(--secondaryColour);
+    color: #e2e2e2;
 }
 
 .about-wrapper {
@@ -272,7 +263,7 @@ ul {
 }
 
 .btn:hover {
-    color: #ddd;
+    color: var(--secondaryBG);
 }
 
 .post-wrapper {
@@ -284,7 +275,7 @@ ul {
 }
 
 .post {
-    border: 2px solid var(--secondaryColour);
+    border: 0.5px solid #444;
     -webkit-box-shadow: -2px 7px 10px -7px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: -2px 7px 10px -7px rgba(0, 0, 0, 0.75);
     box-shadow: -2px 7px 10px -7px rgba(0, 0, 0, 0.75);
@@ -298,7 +289,7 @@ ul {
 }
 
 .post-preview {
-    background-color: #ffffff;
+    background-color: var(--secondaryBG);
     padding: 20px;
 }
 
@@ -307,13 +298,13 @@ ul {
 }
 
 .post-intro {
-    color: #4b5156;
+    color: var(--secondaryText);
 }
 
 /* New styles for intro */
 
 .container {
-    padding: 220px 160px 200px 160px;
+    padding: 220px 200px 200px 200px;
     display: flex;
     margin: 0;
 }
@@ -379,7 +370,7 @@ ul {
     #profile_pic {
         border: 1px solid var(--secondaryText);
         position: relative;
-        padding: 0;
+        padding: 5px;
         margin: 0 auto;
         height: 250px;
         width: 250px;
@@ -485,7 +476,7 @@ ul {
         border: 1px solid var(--secondaryText) !important;
         position: relative;
         top: -120px;
-        padding: 0;
+        padding: 5px;
         margin: 0 auto;
         height: 250px;
         width: 250px;
@@ -504,7 +495,7 @@ ul {
     }
 
     .img-wrapper {
-        margin: 0 60px;
+        margin: 0 70px;
         padding: 0;
         /* display: flex; */
     }
