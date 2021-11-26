@@ -474,28 +474,31 @@ ul {
 
     #profile_pic {
         border: 1px solid var(--secondaryText) !important;
+        display: block;
         position: relative;
-        top: -120px;
-        padding: 5px;
-        margin: 0 auto;
-        height: 250px;
-        width: 250px;
-        z-index: 3;
+        top: -130px;
         bottom: 50px;
+
+        padding: 5px;
+        margin: auto;
+        height: 230px;
+        width: 230px;
+        z-index: 3;
     }
 
     #square {
-        position: relative;
+        /* position: relative; */
+        display: block;
         top: 60px;
         right: 10px;
         background: var(--secondaryColour);
-        width: 240px;
-        height: 240px;
+        width: 220px;
+        height: 22 0px;
         z-index: 0;
     }
 
     .img-wrapper {
-        margin: 0 70px;
+        margin: 0 40px;
         padding: 0;
         /* display: flex; */
     }
