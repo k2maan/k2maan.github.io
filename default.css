@@ -477,10 +477,12 @@ ul {
         display: block;
         position: relative;
         top: -130px;
+        right: -10px;
         bottom: 50px;
 
         padding: 5px;
         margin: auto;
+
         height: 230px;
         width: 230px;
         z-index: 3;
@@ -489,8 +491,9 @@ ul {
     #square {
         /* position: relative; */
         display: block;
+        margin: auto;
         top: 60px;
-        right: 10px;
+        right: 30px;
         background: var(--secondaryColour);
         width: 220px;
         height: 22 0px;
