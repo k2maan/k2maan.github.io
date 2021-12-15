@@ -304,7 +304,7 @@ ul {
 /* New styles for intro */
 
 .container {
-    padding: 200px;
+    padding: 180px 200px;
     display: flex;
     margin: 0;
 }
@@ -317,7 +317,7 @@ ul {
 
 .column-1 {
     flex-shrink: 0; /* shrinks to 0 to apply 70% width*/
-    flex-basis: 50%; /* sets initial width to 70% */
+    flex-basis: 60%; /* sets initial width to 70% */
 }
 
 .box {
@@ -469,7 +469,7 @@ ul {
     }
 
     .intro h1 {
-        font-size: 42px;
+        font-size: 50px !important;
     }
 
     #profile_pic {
