@@ -307,6 +307,8 @@ ul {
     padding: 180px 200px;
     display: flex;
     margin: 0;
+    align-items: center;
+    justify-content: center;
 }
 
 .about-container {
@@ -335,7 +337,7 @@ ul {
 }
 
 .img-wrapper {
-    margin: 100px 0 50px 100px;
+    margin: -25px 0 50px 100px;
 }
 
 #profile_pic {
